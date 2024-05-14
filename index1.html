@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form LSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("images/bg.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .wrapper {
+      background-color: rgba(136, 30, 120, 0.423); /* Adjust the opacity as needed */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      padding-left: 40px;
+    }
+    .input-box {
+      position: relative;
+    }
+    .input-box i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #888;
+    }
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .register-link {
+      text-align: center;
+    }
+    .register-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="login_process.php" method="post">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" name="username" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
